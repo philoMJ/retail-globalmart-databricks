@@ -17,10 +17,24 @@
 
 ## 🛠️ LOG ENTRIES
 
-### 📅 Stardate: 2024-03-29
-#### 🚀 New Altitude Reached:
-* Successfully implemented the **Auth0** login flow.
-* **Takeaway:** Documentation is your best friend; don't try to wing the configuration.
+### 📅 Stardate: 2024-03-31
+#### 🛠 Maintenance Performed:
+* **The Issue:** Both Product and Customer tables had issues with keys. Same prodID had more than one PdtName. Same customer had more than one address.
+    *   **The Struggle:** learned star schema modelling, scd and cdc
+    *   **The Fix:** implement star schema modelling, scd
+    *   **Lesson:** 
+
+#### 💹Cruising Altitude:
+* LEarned CDC, SCD. Diff between data modelling (oltp) and dimensional modelling(olap)
+  
+### 📅 Stardate: 2024-03-30
+#### 🚨 Emergency Procedure:
+* **The Issue:** Schema mismatch when overwriting delta table on running the notebook.
+    *   **The Fix:** Deleted and reran the bronze layer job. Decided to not add code to handle the error durng runtime.
+    *   **Lesson:** Not all errors need fixing! Some are present as warrnings!
+
+#### 💹Cruising Altitude:
+* did some EDA. Created Data Model for silver layer
 
 ### 📅 Stardate: 2024-03-29
 #### 📋Pre-Flight:
@@ -35,8 +49,8 @@
     *   **Lesson:** Always check the "Expiry Date" on your credentials first. High-fidelity transport requires valid passports! 🛂
 
 #### 💹Cruising Altitude:
-* Started on Bronze Layer
-* Created a job for bronze layer. Committed the job to Github
-  
+* Completed Bronze Layer. data lineage and governance cols; made delta table from csv.
+* Created a job for bronze layer.
+
 ---
 *End of Log.*
